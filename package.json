@@ -1,19 +1,19 @@
 {
-  "name": "n8n-nodes-<...>",
+  "name": "n8n-nodes-jwks-node",
   "version": "0.1.0",
-  "description": "",
+  "description": "Node for n8n that can perform JWT verification which uses remote JWKS endpoint to retrieve public keys.",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Wiktor Toporek",
+    "email": "wtoporek@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
+    "url": "https://github.com/vViktorPL/n8n-nodes-jwks-node.git"
   },
   "engines": {
     "node": ">=20.15"
@@ -32,13 +32,9 @@
   ],
   "n8n": {
     "n8nNodesApiVersion": 1,
-    "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js",
-      "dist/credentials/HttpBinApi.credentials.js"
-    ],
+    "credentials": [],
     "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/JwksVerifyNode/JwksVerifyNode.node.js"
     ]
   },
   "devDependencies": {
@@ -51,5 +47,8 @@
   },
   "peerDependencies": {
     "n8n-workflow": "*"
+  },
+  "dependencies": {
+    "jose": "^6.0.11"
   }
 }
